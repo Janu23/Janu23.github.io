@@ -1,72 +1,43 @@
-
 import React from 'react';
-import { Linkedin, Github, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 
+const linkClasses =
+  'inline-flex min-h-11 items-center gap-2 rounded-full border-2 border-black bg-white px-4 py-2 text-sm font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2';
+
 const SocialButtons = () => {
-  const { toast } = useToast();
-  const { language } = useLanguage();
-
-  const handleEmailClick = () => {
-    const email = 'victorjdacruz@gmail.com';
-    navigator.clipboard.writeText(email);
-
-    toast({
-      title: language === 'en' ? 'Email copied!' : 'Email copiado!',
-      description: language === 'en' ? 'The email has been copied to your clipboard.' : 'O email foi copiado para sua área de transferência.',
-    });
-  };
+  const { t } = useLanguage();
 
   return (
-    <div className="flex flex-wrap gap-3 justify-center mt-4 px-4">
-      <Button
-        variant="outline"
-        size="sm"
-        className="rounded-full border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] transition-all text-xs md:text-sm"
-        asChild
+    <div className="flex flex-wrap justify-center gap-3 lg:justify-start" aria-label={t('contact')}>
+      <a
+        href="https://www.linkedin.com/in/victor-januario/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={linkClasses}
+        aria-label={t('linkedinLabel')}
       >
-        <a
-          href="https://www.linkedin.com/in/victor-januario/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 md:gap-2"
-          aria-label="Visit Victor Januário's LinkedIn profile"
-        >
-          <Linkedin size={16} className="md:w-5 md:h-5" aria-hidden="true" />
-          <span className="hidden sm:inline">LinkedIn</span>
-        </a>
-      </Button>
-
-      <Button
-        variant="outline"
-        size="sm"
-        className="rounded-full border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] transition-all text-xs md:text-sm"
-        asChild
+        <Linkedin className="h-4 w-4" aria-hidden="true" />
+        LinkedIn
+      </a>
+      <a
+        href="https://github.com/Janu23"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={linkClasses}
+        aria-label={t('githubLabel')}
       >
-        <a
-          href="https://github.com/Janu23"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 md:gap-2"
-          aria-label="Visit Victor Januário's GitHub profile"
-        >
-          <Github size={16} className="md:w-5 md:h-5" aria-hidden="true" />
-          <span className="hidden sm:inline">GitHub</span>
-        </a>
-      </Button>
-
-      <Button
-        variant="outline"
-        size="sm"
-        className="rounded-full border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] transition-all text-xs md:text-sm"
-        onClick={handleEmailClick}
-        aria-label="Copy Victor Januário's email address to clipboard"
+        <Github className="h-4 w-4" aria-hidden="true" />
+        GitHub
+      </a>
+      <a
+        href="mailto:victorjdacruz@gmail.com"
+        className={linkClasses}
+        aria-label={t('emailLabel')}
       >
-        <Mail size={16} className="md:w-5 md:h-5 mr-1 md:mr-2" aria-hidden="true" />
-        <span className="hidden sm:inline">Email</span>
-      </Button>
+        <Mail className="h-4 w-4" aria-hidden="true" />
+        Email
+      </a>
     </div>
   );
 };

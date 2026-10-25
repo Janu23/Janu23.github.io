@@ -1,129 +1,148 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { ArrowDown, Mail } from 'lucide-react';
 import Header from '@/components/Header';
 import Terminal from '@/components/Terminal';
 import ProjectCard from '@/components/ProjectCard';
 import Footer from '@/components/Footer';
 import SocialButtons from '@/components/SocialButtons';
 import { useLanguage } from '@/hooks/useLanguage';
+import { usePageMetadata } from '@/hooks/usePageMetadata';
+import { projects } from '@/data/projects';
 import { assetUrl } from '@/lib/utils';
 
 const Index = () => {
   const { t, language } = useLanguage();
 
-  const aboutText = {
-    en: "Full Stack Developer with experience in building mobile solutions (Android/Kotlin), robust backend systems (Kotlin/Java + Spring Framework), and web applications (React, Node.js, PHP/Laravel), always applying best practices like Clean Architecture, SOLID principles, and RESTful APIs. I work with cloud (AWS), databases (MySQL, PostgreSQL, MongoDB), and Power BI data analysis—turning numbers into strategic decisions. \n\nI've contributed to projects in civil engineering, energy management, and cultural preservation because I love diving into new domains and solving complex problems (and the simple ones too!). \n\nWhen I’m not coding, I play the trumpet, challenge people to chess (bring it on!), collect vinyl records, discuss books in my literary club, or learn something new.",
-    pt: "Desenvolvedor Full Stack com experiência em criar soluções mobile (Android/Kotlin), backend robusto (Kotlin/Java + Spring Framework) e web (React, Node.js, PHP/Laravel), sempre aplicando boas práticas como Clean Architecture, SOLID e APIs RESTful. Trabalho com cloud (AWS), bancos de dados (MySQL, PostgreSQL e MongoDB) e análise de dados no Power BI, transformando números em decisões estratégicas. \n\nJá atuei em projetos de engenharia civil, gestão energética e preservação cultural, porque adoro aprender novos domínios e resolver problemas complexos (e os simples também!). \n\nQuando não estou codando, toco trompete, jogo xadrez (aceito desafios!), coleciono vinis, discuto livros no meu clube literário ou estou aprendendo alguma coisa nova."
-  };
+  const content = {
+    en: {
+      role: 'Full Stack Developer',
+      headline: 'I turn complex problems into clear digital products.',
+      intro: 'I build web, mobile, and cloud experiences from product idea to production, combining thoughtful interfaces with reliable engineering.',
+      viewProjects: 'View projects',
+      contactMe: 'Get in touch',
+      about: 'I work across mobile solutions with Android and Kotlin, backend systems with Kotlin, Java, and Spring, and modern web applications with React, Next.js, and Node.js. My work also includes AWS, Supabase, relational and document databases, and data analysis with Power BI.\n\nI care about clean architecture, accessible interfaces, and products that solve real problems. Beyond code, I play the trumpet, collect vinyl records, read with my book club, and rarely turn down a chess match.',
+      pageDescription: 'Portfolio of Victor Januário, a Full Stack Developer building web, mobile, and cloud products with React, Next.js, Kotlin, Java, and AWS.',
+    },
+    pt: {
+      role: 'Desenvolvedor Full Stack',
+      headline: 'Transformo problemas complexos em produtos digitais claros.',
+      intro: 'Construo experiências web, mobile e cloud da ideia à produção, combinando interfaces bem pensadas com engenharia confiável.',
+      viewProjects: 'Ver projetos',
+      contactMe: 'Entrar em contato',
+      about: 'Atuo com soluções mobile em Android e Kotlin, sistemas backend com Kotlin, Java e Spring e aplicações web modernas com React, Next.js e Node.js. Meu trabalho também envolve AWS, Supabase, bancos relacionais e de documentos e análise de dados com Power BI.\n\nValorizo arquitetura limpa, interfaces acessíveis e produtos que resolvem problemas reais. Fora do código, toco trompete, coleciono discos, participo de um clube de leitura e dificilmente recuso uma partida de xadrez.',
+      pageDescription: 'Portfólio de Victor Januário, Desenvolvedor Full Stack de produtos web, mobile e cloud com React, Next.js, Kotlin, Java e AWS.',
+    },
+  }[language];
 
-  const projects = [
-    {
-      id: "project5",
-      title: "BrassFlow",
-      year: "2026",
-      description: language === 'en' ?
-        "A browser-based practice platform for B♭ trumpet, cornet, and flugelhorn, with guided exercises, tuning feedback, progress tracking, and gamification." :
-        "Uma plataforma de prática musical no navegador para trompete, cornet e flugelhorn em Sib, com exercícios guiados, feedback de afinação, progresso e gamificação.",
-      image: assetUrl("projects/p05-01brassflow.avif"),
-    },
-    {
-      id: "project1",
-      title: language === 'en' ? "Cartography of Memories" : "Cartografia das Memórias",
-      year: "2020",
-      description: language === 'en' ?
-        "A collaborative project that transforms personal stories from the Covid-19 pandemic into an immersive sound map." :
-        "É um projeto colaborativo que transforma histórias pessoais da pandemia da Covid-19 em um mapa sonoro.",
-      image: assetUrl("projects/p01-01cartografias.avif"),
-    },
-    {
-      id: "project2",
-      title: language === 'en' ? "Quizz App" : "Quizz App",
-      year: "2024",
-      description: language === 'en' ?
-        "Developed Quizz App as an interactive educational game testing knowledge of all 26 Brazilian state flags plus the Federal District. Combines learning with fun through visual identification challenges." :
-        "Desenvolvi o Quizz App como um jogo educativo interativo que testa conhecimentos sobre as bandeiras dos 26 estados brasileiros e do Distrito Federal. O aplicativo combina aprendizagem com diversão através de um desafio de identificação visual.",
-      image: assetUrl("projects/p02-01quizz.avif"),
-    },
-    {
-      id: "project3",
-      title: language === 'en' ? "Mega Sorte" : "Mega Sorte",
-      year: "2023",
-      description: language === 'en' ?
-        "Developed Mega Sorte as a study project to enter Android development with Kotlin. The app generates random combinations of 6 numbers for lottery games, featuring an intuitive interface and simple functionality." :
-        "Desenvolvi o Mega Sorte como um projeto de estudo para ingressar no desenvolvimento Android com Kotlin. O aplicativo gera combinações aleatórias de 6 números, simulando jogos de loteria, com interface intuitiva e funcionalidades simples.",
-      image: assetUrl("projects/p03-01mega.avif"),
-    },
-    {
-      id: "project4",
-      title: language === 'en' ? "Creative Thinking" : "Mente Criativa",
-      year: "2024",
-      description: language === 'en' ?
-        "A space for critical-creative reflection on how technology and society shape each other." :
-        "É um espaço de reflexão onde examino as complexas relações entre tecnologia e sociedade através de uma perspectiva crítica e criativa.",
-      image: assetUrl("projects/p04-01mente.avif"),
-    }
-  ].sort((a, b) => b.year.localeCompare(a.year));
+  const schema = useMemo(
+    () => ({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Victor Januário',
+      jobTitle: content.role,
+      url: 'https://janu23.github.io/',
+      image: 'https://janu23.github.io/lovable-uploads/profile-384.webp',
+      sameAs: ['https://github.com/Janu23', 'https://www.linkedin.com/in/victor-januario/'],
+      knowsAbout: ['Full Stack Development', 'React', 'Next.js', 'Kotlin', 'Java', 'AWS'],
+    }),
+    [content.role],
+  );
+
+  usePageMetadata({
+    title: language === 'pt' ? 'Victor Januário | Desenvolvedor Full Stack' : 'Victor Januário | Full Stack Developer',
+    description: content.pageDescription,
+    canonicalPath: '/',
+    imagePath: '/lovable-uploads/profile-384.webp',
+    language,
+    schema,
+  });
 
   return (
     <div className="grid-bg min-h-screen font-mono">
-      {/* Skip to main content link for keyboard navigation */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-black focus:text-white focus:px-4 focus:py-2"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:border-2 focus:border-black focus:bg-white focus:px-4 focus:py-2 focus:font-bold"
       >
-        {language === 'en' ? 'Skip to main content' : 'Pular para o conteúdo principal'}
+        {t('skipToContent')}
       </a>
 
       <Header />
 
-      <main id="main-content" className="container mx-auto px-4 pt-8">
-        {/* Profile Section */}
-        <section className="flex flex-col items-center mb-16 pt-8" aria-label={language === 'en' ? 'Profile information' : 'Informações do perfil'}>
-          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-black overflow-hidden mb-6">
-            <img
-              src={assetUrl("lovable-uploads/profile-192.webp")}
-              srcSet={`${assetUrl("lovable-uploads/profile-192.webp")} 192w, ${assetUrl("lovable-uploads/profile-384.webp")} 384w`}
-              alt="Victor Januário"
-              className="w-full h-full object-cover"
-              width="192"
-              height="192"
-              sizes="(max-width: 768px) 160px, 192px"
-              fetchPriority="high"
-              loading="eager"
-            />
+      <main id="main-content" className="container mx-auto px-4">
+        <section className="grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16" aria-labelledby="hero-heading">
+          <div className="order-1 flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="absolute -bottom-3 -right-3 h-full w-full border-2 border-black bg-yellow-200" aria-hidden="true" />
+              <img
+                src={assetUrl('lovable-uploads/profile-192.webp')}
+                srcSet={`${assetUrl('lovable-uploads/profile-192.webp')} 192w, ${assetUrl('lovable-uploads/profile-384.webp')} 384w`}
+                alt="Victor Januário"
+                className="relative h-48 w-48 border-4 border-black object-cover sm:h-56 sm:w-56"
+                width="224"
+                height="224"
+                sizes="(max-width: 640px) 192px, 224px"
+                fetchPriority="high"
+              />
+            </div>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Victor Januário</h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-4">
-            {language === 'en' ? 'Software Developer' : 'Desenvolvedor de Software'}
-          </p>
-          <SocialButtons />
+
+          <div className="order-2 text-center lg:text-left">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-gray-600">Victor Januário · {content.role}</p>
+            <h1 id="hero-heading" className="mb-5 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+              {content.headline}
+            </h1>
+            <p className="mx-auto mb-7 max-w-2xl text-base leading-relaxed text-gray-700 sm:text-lg lg:mx-0">{content.intro}</p>
+
+            <div className="mb-6 flex flex-wrap justify-center gap-3 lg:justify-start">
+              <a
+                href="#projects"
+                className="inline-flex min-h-12 items-center gap-2 border-2 border-black bg-black px-5 py-3 font-bold text-white shadow-[4px_4px_0px_0px_rgba(250,204,21,1)] transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+              >
+                {content.viewProjects}
+                <ArrowDown className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a
+                href="mailto:victorjdacruz@gmail.com"
+                className="inline-flex min-h-12 items-center gap-2 border-2 border-black bg-white px-5 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+              >
+                <Mail className="h-4 w-4" aria-hidden="true" />
+                {content.contactMe}
+              </a>
+            </div>
+
+            <SocialButtons />
+          </div>
         </section>
 
-        {/* About Section */}
-        <section className="mb-16" id="about" aria-labelledby="about-heading">
-          <h2 id="about-heading" className="text-2xl md:text-3xl font-bold mb-6 border-b-2 border-black pb-2">
+        <section className="mb-20 scroll-mt-24" id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading" className="mb-6 border-b-2 border-black pb-2 text-2xl font-bold md:text-3xl">
             {t('about')}
           </h2>
-          <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-4 md:p-6 h-96 md:h-96">
-            <Terminal aboutText={aboutText[language]} />
+          <div className="border-2 border-black bg-white p-3 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] sm:p-5">
+            <Terminal aboutText={content.about} />
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section className="mb-16" id="projects" aria-labelledby="projects-heading">
-          <h2 id="projects-heading" className="text-2xl md:text-3xl font-bold mb-6 border-b-2 border-black pb-2">
+        <section className="mb-20 scroll-mt-24" id="projects" aria-labelledby="projects-heading">
+          <h2 id="projects-heading" className="mb-6 border-b-2 border-black pb-2 text-2xl font-bold md:text-3xl">
             {t('projects')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map(project => (
-              <ProjectCard
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                year={project.year}
-                description={project.description}
-                image={project.image}
-              />
-            ))}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {projects.map((project) => {
+              const localizedProject = project[language];
+              return (
+                <ProjectCard
+                  key={project.id}
+                  id={project.id}
+                  title={localizedProject.title}
+                  year={project.year}
+                  category={localizedProject.category}
+                  description={localizedProject.summary}
+                  image={assetUrl(project.image)}
+                  featured={project.featured}
+                />
+              );
+            })}
           </div>
         </section>
       </main>

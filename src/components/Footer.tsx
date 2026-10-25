@@ -7,8 +7,8 @@ const Footer: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="mt-20 py-8 border-t border-black">
-      <div className="container px-4">
+    <footer id="contact" className="mt-20 border-t-2 border-black bg-white/80 py-8">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-4 md:mb-0">
             <p className="font-mono text-sm">
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-600 transition-colors"
-              aria-label="Github"
+              aria-label={t('githubLabel')}
             >
               <Github size={20} aria-hidden="true" />
             </a>
@@ -30,14 +30,14 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-600 transition-colors"
-              aria-label="LinkedIn"
+              aria-label={t('linkedinLabel')}
             >
               <Linkedin size={20} aria-hidden="true" />
             </a>
             <a
               href="mailto:victorjdacruz@gmail.com"
               className="hover:text-gray-600 transition-colors"
-              aria-label="Email"
+              aria-label={t('emailLabel')}
             >
               <Mail size={20} aria-hidden="true" />
             </a>

@@ -3,6 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/space-mono-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/space-mono-700.woff2') format('woff2');
+}
+
 @layer base {
   :root {
     --background: 0 0% 98%;
@@ -76,6 +92,10 @@
     @apply bg-background text-foreground font-mono;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   /* Skip link for keyboard navigation accessibility */
   .sr-only {
     position: absolute;
@@ -98,6 +118,20 @@
     overflow: visible;
     clip: auto;
     white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

@@ -1,0 +1,185 @@
+[
+  {
+    "id": "project5",
+    "year": "2026",
+    "featured": true,
+    "image": "projects/p05-01brassflow.avif",
+    "detailImage": "projects/p05-01brassflow.avif",
+    "link": "https://brassflow.app",
+    "technologies": ["Next.js", "TypeScript", "React", "Supabase", "AWS", "Web Audio API"],
+    "en": {
+      "title": "BrassFlow",
+      "category": "Music technology · Full stack",
+      "summary": "A browser-based practice platform for B♭ brass players, with guided exercises, real-time tuning feedback, progress tracking, and gamification.",
+      "challenge": "Make focused daily practice more accessible to brass players without requiring an app installation, specialist hardware, or long practice sessions.",
+      "solution": "A responsive web experience that combines five-minute guided sessions, instrument-specific microphone calibration, real-time pitch and stability analysis, and a structured learning roadmap.",
+      "highlights": [
+        "Real-time audio analysis directly in the browser",
+        "Guided practice for B♭ trumpet, cornet, and flugelhorn",
+        "Practice history, streaks, XP, and achievements",
+        "Authentication, progress data, and cloud deployment"
+      ],
+      "linkText": "Visit BrassFlow"
+    },
+    "pt": {
+      "title": "BrassFlow",
+      "category": "Tecnologia musical · Full stack",
+      "summary": "Uma plataforma de prática musical no navegador para instrumentistas de metais em Sib, com exercícios guiados, afinação em tempo real, progresso e gamificação.",
+      "challenge": "Tornar o estudo diário mais acessível para instrumentistas de metais, sem exigir instalação de aplicativo, equipamento especializado ou sessões longas de prática.",
+      "solution": "Uma experiência web responsiva que reúne sessões guiadas de cinco minutos, calibração do microfone por instrumento, análise de afinação e estabilidade em tempo real e um roadmap estruturado de aprendizagem.",
+      "highlights": [
+        "Análise de áudio em tempo real diretamente no navegador",
+        "Prática guiada para trompete, cornet e flugelhorn em Sib",
+        "Histórico de prática, sequências, XP e conquistas",
+        "Autenticação, dados de progresso e infraestrutura em nuvem"
+      ],
+      "linkText": "Acessar BrassFlow"
+    }
+  },
+  {
+    "id": "project2",
+    "year": "2024",
+    "featured": false,
+    "image": "projects/p02-01quizz.avif",
+    "detailImage": "projects/p02-02quizz.avif",
+    "link": "https://github.com/Janu23/Flags",
+    "technologies": ["Android", "Kotlin"],
+    "en": {
+      "title": "Quizz App",
+      "category": "Android · Educational game",
+      "summary": "An interactive educational game that challenges players to identify the flags of Brazil's 26 states and the Federal District.",
+      "challenge": "Turn geographic knowledge into a simple, visual learning experience while completing the full Android publishing workflow.",
+      "solution": "A Kotlin application with visual identification challenges, immediate feedback, and a focused mobile interface prepared and published through the Google Play process.",
+      "highlights": [
+        "Coverage of all Brazilian states and the Federal District",
+        "Interactive visual feedback",
+        "Signed Android App Bundle preparation",
+        "Store assets and Google policy compliance"
+      ],
+      "linkText": "View source code"
+    },
+    "pt": {
+      "title": "Quizz App",
+      "category": "Android · Jogo educativo",
+      "summary": "Um jogo educativo interativo que desafia o usuário a identificar as bandeiras dos 26 estados brasileiros e do Distrito Federal.",
+      "challenge": "Transformar conhecimento geográfico em uma experiência visual simples e, ao mesmo tempo, completar todo o fluxo de publicação Android.",
+      "solution": "Uma aplicação em Kotlin com desafios de identificação visual, feedback imediato e interface mobile focada, preparada e publicada seguindo o processo da Google Play.",
+      "highlights": [
+        "Cobertura de todos os estados e do Distrito Federal",
+        "Feedback visual interativo",
+        "Preparação do Android App Bundle assinado",
+        "Materiais de loja e adequação às políticas Google"
+      ],
+      "linkText": "Ver código-fonte"
+    }
+  },
+  {
+    "id": "project4",
+    "year": "2024",
+    "featured": false,
+    "image": "projects/p04-01mente.avif",
+    "detailImage": "projects/p04-01mente.avif",
+    "link": "https://mementecriativa.blogspot.com/",
+    "technologies": ["Blogspot", "Content design"],
+    "en": {
+      "title": "Creative Thinking",
+      "category": "Writing · Technology and society",
+      "summary": "A space for critical and creative reflection on how technology and society shape each other.",
+      "challenge": "Discuss complex technological and social questions in a format that remains approachable to readers outside specialist circles.",
+      "solution": "A collection of articles and essays that connects technical developments with ethics, culture, and the human impact of digital transformation.",
+      "highlights": [
+        "Critical analysis of technology's social impact",
+        "Accessible long-form writing",
+        "Connection between technical and humanistic perspectives"
+      ],
+      "linkText": "Read the articles"
+    },
+    "pt": {
+      "title": "Mente Criativa",
+      "category": "Escrita · Tecnologia e sociedade",
+      "summary": "Um espaço de reflexão crítica e criativa sobre como tecnologia e sociedade transformam uma à outra.",
+      "challenge": "Discutir questões tecnológicas e sociais complexas em um formato acessível também para leitores fora dos círculos especializados.",
+      "solution": "Uma coleção de artigos e ensaios que conecta desenvolvimento técnico, ética, cultura e os impactos humanos da transformação digital.",
+      "highlights": [
+        "Análise crítica dos impactos sociais da tecnologia",
+        "Textos longos em linguagem acessível",
+        "Conexão entre perspectivas técnicas e humanísticas"
+      ],
+      "linkText": "Ler os artigos"
+    }
+  },
+  {
+    "id": "project3",
+    "year": "2023",
+    "featured": false,
+    "image": "projects/p03-01mega.avif",
+    "detailImage": "projects/p03-01mega.avif",
+    "link": "https://github.com/Janu23/Luck",
+    "technologies": ["Android SDK", "Kotlin"],
+    "en": {
+      "title": "Mega Sorte",
+      "category": "Android · Learning project",
+      "summary": "An Android study project that generates unique six-number lottery combinations through a clear, one-tap interface.",
+      "challenge": "Learn the fundamentals of native Android development and understand the complete application publication cycle.",
+      "solution": "A compact Kotlin application that generates six non-repeating numbers from 1 to 60 and packages the experience in a minimalist interface.",
+      "highlights": [
+        "Unique random-number generation",
+        "One-tap interaction",
+        "Android Studio and Kotlin fundamentals",
+        "Hands-on Play Store publication workflow"
+      ],
+      "linkText": "View source code"
+    },
+    "pt": {
+      "title": "Mega Sorte",
+      "category": "Android · Projeto de estudo",
+      "summary": "Um projeto Android que gera combinações únicas de seis números por meio de uma interface simples e direta.",
+      "challenge": "Aprender os fundamentos do desenvolvimento Android nativo e compreender o ciclo completo de publicação de uma aplicação.",
+      "solution": "Uma aplicação compacta em Kotlin que gera seis números sem repetição entre 1 e 60 e apresenta a experiência em uma interface minimalista.",
+      "highlights": [
+        "Geração de números aleatórios sem repetição",
+        "Interação em um único toque",
+        "Fundamentos de Android Studio e Kotlin",
+        "Experiência prática com o fluxo da Play Store"
+      ],
+      "linkText": "Ver código-fonte"
+    }
+  },
+  {
+    "id": "project1",
+    "year": "2020",
+    "featured": false,
+    "image": "projects/p01-01cartografias.avif",
+    "detailImage": "projects/p01-02cartografias.avif",
+    "link": "https://cartografiadasmemorias.org",
+    "technologies": ["JavaScript", "PHP", "Mapbox", "AWS S3"],
+    "en": {
+      "title": "Cartography of Memories",
+      "category": "Digital memory · Interactive map",
+      "summary": "A collaborative project that transforms personal stories from the COVID-19 pandemic into an immersive sound map.",
+      "challenge": "Preserve the human and social dimensions of the pandemic through a public archive capable of representing many perspectives and places.",
+      "solution": "A collaborative platform that organizes georeferenced oral accounts in an interactive map, making individual testimonies part of an accessible collective memory.",
+      "highlights": [
+        "Georeferenced oral histories",
+        "Interactive Mapbox experience",
+        "Audio storage with AWS S3",
+        "Multidisciplinary and non-profit collaboration"
+      ],
+      "linkText": "Visit the project"
+    },
+    "pt": {
+      "title": "Cartografia das Memórias",
+      "category": "Memória digital · Mapa interativo",
+      "summary": "Um projeto colaborativo que transforma histórias pessoais da pandemia de Covid-19 em um mapa sonoro imersivo.",
+      "challenge": "Preservar as dimensões humanas e sociais da pandemia em um arquivo público capaz de representar múltiplas perspectivas e lugares.",
+      "solution": "Uma plataforma colaborativa que organiza relatos orais georreferenciados em um mapa interativo, integrando testemunhos individuais a uma memória coletiva acessível.",
+      "highlights": [
+        "Relatos orais georreferenciados",
+        "Experiência interativa com Mapbox",
+        "Armazenamento de áudio com AWS S3",
+        "Colaboração multidisciplinar e sem fins lucrativos"
+      ],
+      "linkText": "Visitar o projeto"
+    }
+  }
+]
