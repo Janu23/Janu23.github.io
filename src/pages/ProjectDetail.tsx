@@ -16,6 +16,24 @@ const ProjectDetail = () => {
   }, []);
 
   const projectsData = {
+    project5: {
+      en: {
+        title: "BrassFlow",
+        description: "Guided daily practice for B♭ brass instruments in the browser.",
+        fullDescription: "I developed BrassFlow as a browser-based music practice platform for B♭ brass players. The experience combines focused five-minute sessions, instrument-specific microphone calibration, real-time pitch and stability feedback, and a structured learning roadmap. Practice history, streaks, XP, and achievements help players build a consistent routine and understand what to improve next.\n\nThe production application is built with Next.js and TypeScript, uses Supabase for authentication and data, analyzes audio directly in the browser, and runs on AWS infrastructure. BrassFlow is currently in public beta and supports B♭ trumpet, cornet, and flugelhorn without requiring an app installation or professional microphone.",
+        technologies: ["Next.js", "TypeScript", "React", "Supabase", "AWS", "Web Audio API"],
+        linkText: "Visit BrassFlow"
+      },
+      pt: {
+        title: "BrassFlow",
+        description: "Prática diária guiada para instrumentos de metal em Sib diretamente no navegador.",
+        fullDescription: "Desenvolvi o BrassFlow como uma plataforma de estudo musical no navegador para instrumentistas de metais em Sib. A experiência reúne sessões focadas de cinco minutos, calibração do microfone específica por instrumento, feedback de afinação e estabilidade em tempo real e um roadmap estruturado de aprendizagem. O histórico de prática, as sequências, o XP e as conquistas ajudam o músico a criar uma rotina consistente e entender o que precisa melhorar.\n\nA aplicação em produção foi construída com Next.js e TypeScript, usa Supabase para autenticação e dados, analisa áudio diretamente no navegador e roda em infraestrutura AWS. O BrassFlow está em beta público e oferece suporte a trompete, cornet e flugelhorn em Sib, sem exigir instalação de aplicativo ou microfone profissional.",
+        technologies: ["Next.js", "TypeScript", "React", "Supabase", "AWS", "Web Audio API"],
+        linkText: "Acessar BrassFlow"
+      },
+      image: "projects/p05-01brassflow.avif",
+      link: "https://brassflow.app"
+    },
     project1: {
       en: {
         title: "Cartography of Memories",

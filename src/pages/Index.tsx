@@ -17,6 +17,15 @@ const Index = () => {
 
   const projects = [
     {
+      id: "project5",
+      title: "BrassFlow",
+      year: "2026",
+      description: language === 'en' ?
+        "A browser-based practice platform for B♭ trumpet, cornet, and flugelhorn, with guided exercises, tuning feedback, progress tracking, and gamification." :
+        "Uma plataforma de prática musical no navegador para trompete, cornet e flugelhorn em Sib, com exercícios guiados, feedback de afinação, progresso e gamificação.",
+      image: assetUrl("projects/p05-01brassflow.avif"),
+    },
+    {
       id: "project1",
       title: language === 'en' ? "Cartography of Memories" : "Cartografia das Memórias",
       year: "2020",
