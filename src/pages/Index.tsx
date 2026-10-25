@@ -72,12 +72,12 @@ const Index = () => {
         <section className="grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16" aria-labelledby="hero-heading">
           <div className="order-1 flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="absolute -bottom-3 -right-3 h-full w-full border-2 border-black bg-yellow-200" aria-hidden="true" />
+              <div className="absolute -bottom-3 -right-3 h-full w-full rounded-full border-2 border-black bg-yellow-200" aria-hidden="true" />
               <img
                 src={assetUrl('lovable-uploads/profile-192.webp')}
                 srcSet={`${assetUrl('lovable-uploads/profile-192.webp')} 192w, ${assetUrl('lovable-uploads/profile-384.webp')} 384w`}
                 alt="Victor Januário"
-                className="relative h-48 w-48 border-4 border-black object-cover sm:h-56 sm:w-56"
+                className="relative h-48 w-48 rounded-full border-4 border-black object-cover sm:h-56 sm:w-56"
                 width="224"
                 height="224"
                 sizes="(max-width: 640px) 192px, 224px"
